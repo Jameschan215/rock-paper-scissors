@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="main.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+
+		<link rel="stylesheet" href="main.css" />
+		<script
+			src="https://kit.fontawesome.com/8b6d454afa.js"
+			crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header -->
+			<header class="header">
+				<h1>Rock Paper Scissors</h1>
+			</header>
+
+			<!-- Game Info -->
+			<div id="game-info" class="game-info">
+				<h3>👻 Important Notification 👻</h3>
+
+				<p class="introduction">
+					In this spine-chilling yet fun game, you'll face a hungry zombie! It
+					wants to munch on your brain, but out of humanity, it's willing to
+					give you a chance to save yourself. Are you ready for the challenge?
+				</p>
+
+				<div class="accordion hidden">
+					<h4 class="accordion-header">Game Rules:</h4>
+					<ol class="accordion-content">
+						<li>
+							<strong>Rock-Paper-Scissors</strong>: You will go head-to-head
+							with the zombie in a game of Rock-Paper-Scissors! Win a round to
+							earn <strong>1 point</strong>. Lose or tie, you get nothing.
+						</li>
+
+						<li>
+							<strong>Score Battle</strong>: Your goal is to be the first to
+							reach <strong>5 points</strong>! If you can score before the
+							zombie does, it will graciously let you go and leave in peace.
+						</li>
+						<li>
+							<strong>Zombie's Hunger</strong>: If the zombie defeats you, your
+							brain becomes its delicious meal! 😱
+						</li>
+					</ol>
+				</div>
+
+				<div class="info-buttons">
+					<button id="show-btn" class="button">Show Rules</button>
+					<button id="start-btn" class="button">Ready To Go?</button>
+				</div>
+			</div>
+
+			<!-- Main -->
+			<div class="battle-field hidden">
+				<div class="battle-field-display">
+					<!-- Player avatar and score -->
+					<div class="player">
+						<div id="player-score" class="score">0</div>
+						<div class="avatar">🧑🏻‍🌾</div>
+					</div>
+
+					<div id="info-display" class="info-display">
+						<!-- Round information -->
+						<div id="round-message" class="round-message hidden">
+							<h2 id="round-message-title">TIE</h2>
+							<p id="message">
+								<span id="player-selected-icon">
+									<i class="fa-regular fa-hand-back-fist"></i>
+								</span>
+								<span class="vs-symbol">vs</span>
+								<span id="zombie-selected-icon">
+									<i class="fa-regular fa-hand-back-fist"></i>
+								</span>
+							</p>
+						</div>
+
+						<!-- Final Information -->
+						<div id="final-info" class="final-info hidden">
+							<h3 id="final-info-title" class="final-info-title"></h3>
+							<div id="final-info-message" class="final-info-message"></div>
+							<button id="restart-btn" class="button">Restart Game</button>
+						</div>
+					</div>
+
+					<!-- Zombie avatar and score -->
+					<div class="zombie">
+						<div id="zombie-score" class="score">0</div>
+						<div class="avatar">🧟‍♀️</div>
+					</div>
+				</div>
+
+				<!-- Battle field control area -->
+				<div class="battle-field-buttons">
+					<button value="0">
+						<i class="fa-regular fa-hand-back-fist"></i>
+					</button>
+					<button value="1">
+						<i class="fa-regular fa-hand"></i>
+					</button>
+					<button value="2">
+						<i class="fa-regular fa-hand-scissors"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<script src="main.js"></script>
+		<script src="accordion.js"></script>
+	</body>
 </html>

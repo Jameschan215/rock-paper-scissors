@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Fontdiner+Swanky&family=Nosifer&family=Rock+3D&family=Rubik+Bubbles&family=Rubik+Scribble&family=Underdog&display=swap');
+
+:root {
+	--primary-text-color: rgb(100 116 139);
+	--secondary-text-color: rgb(163 163 163);
+
+	--primary-bg-color: rgb(3 12 30);
+	--secondary-bg-color: rgb(2 6 23);
+
+	--primary-border-color: rgb(30 41 59);
+	--secondary-border-color: rgba(128 128 128 /0.1);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: var(--secondary-bg-color);
+	color: var(--primary-text-color);
+
+	font-family: 'Rubik Scribble', serif;
+	font-weight: 400;
+	font-style: normal;
+
+	overflow: hidden;
+}
+
+.container {
+	background-color: var(--primary-bg-color);
+	margin: 0 auto;
+	height: 100%;
+	max-width: 960px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.header {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+
+	padding: 48px 0;
+	text-align: center;
+	border-bottom: 1px solid var(--secondary-border-color);
+}
+
+.header h1 {
+	font-size: 48px;
+	color: var(--primary-text-color);
+}
+
+/* Game Information */
+.game-info {
+	height: 100%;
+	max-width: 640px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 80px;
+	gap: 24px;
+
+	font-family: 'Underdog', serif;
+	font-weight: 400;
+	font-style: normal;
+	text-align: start;
+	padding: 24px;
+	font-size: 18px;
+}
+
+.game-info h3 {
+	font-family: 'Nosifer', serif;
+	font-weight: 400;
+	font-style: normal;
+	color: rgb(153 27 27);
+	text-align: center;
+	font-size: 28px;
+}
+
+.game-info h4 {
+	margin: 8px 0;
+	text-align: center;
+	color: var(--secondary-text-color);
+	font-size: 20px;
+}
+
+.game-info p,
+.game-info li {
+	margin: 10px 0;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.game-info p {
+	font-size: 20px;
+	text-indent: 24px;
+}
+
+.game-info li {
+	list-style-type: none;
+}
+
+.game-info strong {
+	color: var(--secondary-text-color);
+}
+
+.info-buttons {
+	display: flex;
+	gap: 20px;
+}
+
+/* Battle Field */
+.battle-field {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.battle-field-display {
+	width: 100%;
+	padding: 48px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+}
+
+/* Avatar Icons and Scores */
+.player,
+.zombie {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 28px;
+	height: 100%;
+	min-width: 200px;
+}
+
+.player {
+	border-right: 1px solid var(--secondary-border-color);
+}
+
+.zombie {
+	border-left: 1px solid var(--secondary-border-color);
+}
+
+.avatar {
+	font-size: 96px;
+}
+
+.score {
+	background-color: var(--primary-bg-color);
+
+	text-align: center;
+	padding: 12px;
+	aspect-ratio: 1 / 1;
+	font-size: 60px;
+	border-radius: 4px;
+	color: var(--secondary-text-color);
+	border: 1px solid var(--primary-border-color);
+}
+
+/* Information Display */
+.info-display {
+	text-align: center;
+	font-family: 'Fontdiner Swanky', serif;
+	font-weight: 400;
+	font-style: normal;
+	height: 100%;
+	width: 100%;
+	flex-grow: 1;
+}
+
+/* Round messages */
+.round-message {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 48px;
+}
+.info-display h2 {
+	letter-spacing: 12px;
+	font-size: 48px;
+}
+
+.info-display p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 48px;
+	font-size: 60px;
+}
+
+.info-display .round-message .icon-win {
+	color: var(--secondary-text-color);
+	font-size: 72px;
+}
+
+.info-display .round-message .vs-symbol {
+	letter-spacing: 6px;
+	color: rgb(217 119 6);
+	font-size: 44px;
+}
+
+.win {
+	color: green;
+}
+
+.lose {
+	color: rgb(153 27 27);
+}
+
+.tie {
+	color: var(--secondary-text-color);
+}
+
+/* Final Outcome Information */
+.final-info {
+	height: 100%;
+	font-family: 'Underdog', serif;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--secondary-text-color);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+}
+
+.final-info-title {
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.final-info-message {
+	padding: 0 48px;
+}
+
+.final-info-message p {
+	text-align: justify;
+	margin: 12px 0;
+	line-height: 1.5;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+.battle-field-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+	padding: 48px 0;
+	border-top: 1px solid var(--secondary-border-color);
+}
+
+.battle-field-buttons button {
+	color: var(--primary-text-color);
+	font-size: 3.2rem;
+	width: 96px;
+	height: 96px;
+	border-radius: 8px;
+	border: 1px solid var(--primary-border-color);
+	background-color: transparent;
+	cursor: pointer;
+	position: relative;
+	color: var(--primary-text-color);
+
+	transition: all 0.25s;
+}
+
+.battle-field-buttons button:hover {
+	scale: 1.02;
+	transform: translateY(-3px);
+	color: var(--secondary-text-color);
+	border-color: var(--secondary-text-color);
+}
+
+.battle-field-buttons button:active {
+	scale: 1;
+	transform: translateY(-1px);
+	color: var(--secondary-text-color);
+}
+
+.battle-field-buttons button:disabled {
+	pointer-events: none;
+	color: var(--secondary-text-color);
+	cursor: not-allowed;
+	opacity: 0.2;
+}
+
+/* Hide element */
+.hidden {
+	display: none !important;
+}
+
+/* General Button */
+.button {
+	color: var(--primary-text-color);
+	font-size: 18px;
+	border-radius: 4px;
+	border: 1px solid var(--primary-border-color);
+	background-color: transparent;
+	cursor: pointer;
+	position: relative;
+	color: var(--primary-text-color);
+	min-width: 160px;
+	padding: 8px;
+
+	font-family: 'Underdog', serif;
+	font-weight: 400;
+	font-style: normal;
+
+	transition: all 0.25s;
+}
+
+.button:hover {
+	scale: 1.01;
+	transform: translateY(-2px);
+	color: var(--secondary-text-color);
+	border-color: var(--secondary-text-color);
+}
+
+.button:active {
+	scale: 1;
+	transform: translateY(-1px);
+	color: var(--secondary-text-color);
+}
